@@ -1,5 +1,80 @@
 ---
 import Section from "../Section.astro"
+import { projects } from "@/cv"
 ---
 
-<Section title="Projects"></Section>
+<Section title='Proyectos'>
+  <ul>
+    {
+      projects.map(({ description, highlights, name, url, isActive }) => {
+        return (
+          <li>
+            <article>
+              <header>
+                <h3>
+                  <a href={url} title={`Ver el proyecto ${name}`}>
+                    {name}
+                  </a>
+                  {isActive && <span>&bull;</span> }
+                </h3>
+                <p>{description}</p>
+              </header>
+              <footer>
+                <ul>
+                  {highlights.map((highlit) => {
+                    return <li class="animate-iteration-infinite animate-pulsar">{highlit}</li>
+                  })}
+                </ul>
+              </footer>
+            </article>
+          </li>
+        )
+      })
+    }
+  </ul>
+</Section>
+
+<style>
+  ul {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1rem;
+  }
+  article {
+    border-radius: 6px;
+    border: 1px solid #f2f2f2;
+    gap: 16px;
+    display: flex;
+    flex-direction: column;
+    padding: 16px;
+    margin-inline: -16px;
+    height: 100%;
+  }
+  article header {
+    flex: 1;
+  }
+  article a {
+    color: #111;
+  }
+  article a:hover {
+    text-decoration: underline;
+  }
+  article h3 span {
+    color: rgb(0, 185, 43);
+  }
+  footer {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 4px;
+    font-size: 0.6rem;
+  }
+  footer li {
+    border-radius: 6px;
+    background: #ccc;
+    color: black;
+    font-size: 0.8rem;
+    font-weight: 500;
+    padding: 0.2rem 0.6rem;
+    transition: all 0.3s ease;
+  }
+</style>

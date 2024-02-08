@@ -192,13 +192,25 @@
     "reference": "Reference…"
   }],
   "projects": [{
-    "name": "Project",
-    "startDate": "2019-01-01",
-    "endDate": "2021-01-01",
-    "description": "Description...",
+    "name": "DEC",
+    "startDate": "2022-07-20",
+    "endDate": null,
+    "isActive": true,
+    "description": "Una aplicación web que está destinada a medir el funcionamiento psico-cognitivo de un conductor para determinar si es optimo para continuar su viaje.",
     "highlights": [
       "Won award at AIHacks 2016"
     ],
-    "url": "https://project.com/"
+    "url": "https://project.com/" 
+  },
+  {
+    "name": "A&J",
+    "startDate": "2024-02-10",
+    "endDate": null,
+    "isActive": true,
+    "description": "Una aplicación web que está destinada a medir el funcionamiento psico-cognitivo de un conductor para determinar si es optimo para continuar su viaje.",
+    "highlights": [
+      "Started the company"
+    ],
+    "url": "https://project.com/" 
   }]
 }
